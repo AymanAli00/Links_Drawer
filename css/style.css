@@ -1,0 +1,211 @@
+:root {
+    --primary-bg-color: #1e3050;
+    --accent-color: rgb(146, 155, 190);
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --font-color-white: #fff;
+    --font-color-black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 300px;
+    min-height: 400px;
+    background-color: var(--primary-bg-color) !important;
+}
+
+h4,
+.title {
+    text-align: center;
+    user-select: none;
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 16pt;
+    color: var(--font-color-white);
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#warning {
+    display: none;
+    box-shadow: var(--box-shadow);
+    color: var(--font-color-white);
+    background-color: red;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    user-select: none;
+}
+
+input[type=search] {
+    margin: 10px 0 10px 10px;
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow);
+    width: 300px;
+}
+
+.form .add-item {
+    margin-right: 10px;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow);
+    user-select: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.item-box .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-box .icon img {
+    width: 24px;
+}
+
+.item-box>.tools>button:hover {
+    background-color: #6475d8;
+}
+
+.item-container>.tools div {
+    cursor: pointer;
+    border: 0;
+    background-color: var(--accent-color);
+    padding: 10px;
+}
+
+.item-container .tools {
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent-color);
+    margin: 0 5px 5px 5px;
+    width: 100px;
+    border-top: var(--font-color-black) solid 1px;
+}
+
+.item-box {
+    border-radius: 10px;
+    margin: 5px 5px 0 5px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    user-select: none;
+}
+
+.item {
+    color: var(--font-color-black);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: var(--accent-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.addLink {
+    color: var(--font-color-black);
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--accent-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.item-box a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.item-container:hover {
+    border: var(--accent-color) solid 1px;
+    border-radius: 10px;
+}
+
+/* Basic styling for the modal */
+#addModal,
+#editModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-bg-color);
+    color: var(--font-color-white);
+    padding: 20px;
+    border: 1px solid var(--primary-bg-color);
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* Styling for the overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0 0 5px 0;
+    outline: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    background-color: var(--primary-bg-color);
+    box-shadow: var(--box-shadow);
+    color: var(--font-color-white);
+}
+
+#addModal button,
+#editModal button {
+    border: 0;
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow);
+    width: calc(100% - 107px);
+    user-select: none;
+}

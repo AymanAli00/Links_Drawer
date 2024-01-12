@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/bootstrap.js"></script>
+    <script defer src="js/fontawesome.js"></script>
+    <script defer src="js/solid.js"></script>
+    <title>Links Drawer</title>
+</head>
+
+<body>
+    <div class="title">Links Drawer</div>
+    <div class="form">
+        <input type="search" dir="auto" name="search" id="searchInput" placeholder="Search">
+        <div class="add-item">
+            <a href="#" class="addLink" id="addLink">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container" id="container">
+        <div></div>
+    </div>
+
+    <!-- Add Modal -->
+    <div id="overlay"></div>
+    <div id="addModal">
+        <h4>Add Link</h4>
+        <p id="warning"></p>
+        <label for="link_name">Name</label>
+        <input type="text" id="link_name" required>
+        <label for="link_url">URL</label>
+        <input type="text" id="link_url" required>
+        <button id="submitLink">Submit</button>
+        <button id="cancelLink">Cancel</button>
+    </div>
+    <div id="editModal">
+        <h4>Update Link</h4>
+        <p id="warning"></p>
+        <label for="newName">Name</label>
+        <input type="text" id="newName" name="newName" required>
+        <label for="newUrl">URL</label>
+        <input type="text" id="newUrl" name="newUrl" required>
+        <button id="updateLink">Update</button>
+        <button id="cancelUpdateLink">Cancel</button>
+    </div>
+</body>
+
+</html>
